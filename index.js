@@ -1,5 +1,4 @@
 const urlParams = new URLSearchParams(location.search);
-
 let roomId = urlParams.get("id");
 
 if (!roomId) {
@@ -8,7 +7,6 @@ if (!roomId) {
 }
 
 const textArea = document.querySelector("textarea");
-
 const worker = new Worker("worker.js");
 
 const wsurl = `wss://us-nyc-1.websocket.me/v3/${roomId}?api_key=OXRCUIAFhl9ip9WXwAlQIIqtakRpe58g2vkd1cKFqHFOX3YgXh36NdtydCup`;
